@@ -6,11 +6,11 @@ namespace Anpero.Ultil
     {
         public static string RemoveSpecialCharacters(string str)
         {
-            return Regex.Replace(str, "[^a-zA-Z0-9_.]+", "", RegexOptions.Compiled);
+            return string.IsNullOrEmpty(str)?string.Empty:Regex.Replace(str, "[^a-zA-Z0-9_.]+", "", RegexOptions.Compiled);
         }
         public static string RemoveUnicodeToEng(string s)
         {
-            string retVal = String.Empty;
+            string retVal = string.Empty;
             int pos;
             if (!string.IsNullOrEmpty(s))
             {

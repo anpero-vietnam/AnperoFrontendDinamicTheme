@@ -1,31 +1,39 @@
 ﻿using Anpero;
 using Anpero.Ultil;
+using AnperoFrontend.Bussiness;
 using AnperoModels;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
+using System.Configuration;
 
 
 namespace AnperoFrontend.Pages
 {
     public class BaseController : PageModel
     {
-        private string rawUrl { get; set; } = string.Empty;
+        public readonly AppSettings appConfig;
+        public AnperoClient client;
+        public ICacheService cacheService = new CacheService();
+        public IClientControl clientControl;
+        public BaseController(IOptions<AppSettings> iOptions, IClientControl iClient)
+        {
+            appConfig = iOptions.Value;
+            clientControl = iClient;
 
-        ICacheService cacheService = new CacheService();
+            cacheService = new CacheService();
+        }
+
+
+
+
         public void OnGet()
         {
-
+            var rawUrl = $"{Request.Scheme}://{Request.Host}";
+            var sclient = clientControl.GetClient(appConfig, rawUrl);
 
         }
-        public AnperoClient clientso
-        {
 
-            get
-            {
-                var rawUrl2 = $"{Request.Scheme}://{Request.Host}";
-                return new AnperoClient();
-            }
-            set { }
-        }
     }
 
 }

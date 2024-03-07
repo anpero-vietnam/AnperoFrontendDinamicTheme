@@ -5,6 +5,6 @@
         public AnperoClient() { }
         public DateTime? ExpirationDate { get; set; }
         public string Token { get; set; } = string.Empty;
-        public int ClientId { get; set; } = 0;
+        public string ClientId { get; set; } = string.Empty;
     }
 }
