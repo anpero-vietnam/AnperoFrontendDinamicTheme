@@ -1,0 +1,44 @@
+﻿@using Anpero.Ultil;
+@{
+
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>    
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="@StringHelper.RemoveSpecialCharacters(ViewBag.description)" />
+    <meta name="keywords" content="@ViewData["keywords"]" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+    <meta name="distribution" content="Global" />
+    <meta name="revisit-after" content="1 days" />
+    <meta http-equiv="REFRESH" content="1800" />
+    <meta name="robots" content="index,follow,all" />
+    <meta property="og:image:type" content="image/jpg">    
+    <meta name="generator" content="Anpero" />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ViewBag.Title">
+    <meta name="twitter:title" content="@ViewBag.Title">
+    <meta name="twitter:description" content="@StringHelper.RemoveSpecialCharacters(ViewBag.description)">
+    <meta name="twitter:creator" content="@ViewBag.Title">
+    <meta name="twitter:image" content="@ViewBag.GraphImage">
+    <!-- Open Graph data -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="" />
+    <meta name="title" property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta name="image" property="og:image" content="" />
+    <meta name="description" property="og:description" content="@StringHelper.RemoveSpecialCharacters(ViewBag.description)" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta name="thumbnail" content="@ViewBag.GraphImage" />
+    @await RenderSectionAsync("head", required: false)
+</head>
+<body>    
+   @RenderBody()
+   @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
