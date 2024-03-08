@@ -21,11 +21,8 @@ namespace AnperoFrontend.Bussiness
                     /// get  from appseting file,  used for independent sites deployed
                     anperoClient.ClientId = appSettings.ClientId;
                     anperoClient.Token = appSettings.TokenKey;                   
-
-
                 }
             }
-          
             return anperoClient;
         }
     }

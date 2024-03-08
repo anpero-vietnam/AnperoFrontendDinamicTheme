@@ -11,19 +11,7 @@ builder.Services.AddRazorPages();
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 builder.Services.AddSingleton<IClientControl, ClientControl>();
 builder.Services.AddSingleton<ICacheService, CacheService>();
-//builder.Services.AddResponseCompression(options =>
-//{
-//    options.EnableForHttps = true;
-//});
-//builder.Services.Configure<BrotliCompressionProviderOptions>(options =>
-//{
-//    options.Level = CompressionLevel.Optimal;
-//});
 
-//builder.Services.Configure<GzipCompressionProviderOptions>(options =>
-//{
-//    options.Level = CompressionLevel.SmallestSize;
-//});
 
 var app = builder.Build();
 

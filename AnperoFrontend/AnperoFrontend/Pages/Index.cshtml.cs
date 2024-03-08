@@ -21,6 +21,7 @@ namespace AnperoFrontend.Pages
      
         public string Test()
         {
+            
             var rawUrl = $"{Request.Scheme}://{Request.Host}";
             _client.GetClient(_appSetting,rawUrl);
             return "<div>XXXXX</div>";

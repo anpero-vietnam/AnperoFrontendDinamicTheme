@@ -1,10 +1,12 @@
-﻿@using Anpero.Ultil;
+﻿@model BaseController
+@using Anpero.Ultil;
 @{
-
+    string[] bodyHtml = Model.GetContent(1).Split("@RenderBody()");
 }
 <!DOCTYPE html>
 <html lang="vi">
-<head>    
+<head>
+
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <title>@ViewBag.Title</title>
     <meta name="description" content="@StringHelper.RemoveSpecialCharacters(ViewBag.description)" />
@@ -16,7 +18,7 @@
     <meta name="revisit-after" content="1 days" />
     <meta http-equiv="REFRESH" content="1800" />
     <meta name="robots" content="index,follow,all" />
-    <meta property="og:image:type" content="image/jpg">    
+    <meta property="og:image:type" content="image/jpg">
     <meta name="generator" content="Anpero" />
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
@@ -36,9 +38,19 @@
     <meta name="thumbnail" content="@ViewBag.GraphImage" />
     @await RenderSectionAsync("head", required: false)
 </head>
-<body>    
-   @RenderBody()
-   @await RenderSectionAsync("Scripts", required: false)
+<body>
+    @if (bodyHtml.Length == 2)
+    {
+
+        @Html.Raw(bodyHtml[0])
+        @RenderBody()
+        @Html.Raw(bodyHtml[1])
+    }
+    else
+    {
+        @RenderBody()
+    }
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
 
