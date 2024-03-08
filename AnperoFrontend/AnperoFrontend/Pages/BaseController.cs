@@ -12,16 +12,14 @@ namespace AnperoFrontend.Pages
 {
     public class BaseController : PageModel
     {
-        public readonly AppSettings appConfig;
-        public AnperoClient client;
-        public ICacheService cacheService = new CacheService();
-        public IClientControl clientControl;
-        public BaseController(IOptions<AppSettings> iOptions, IClientControl iClient)
+        public readonly AppSettings appConfig;        
+        public readonly ICacheService cacheService = new CacheService();
+        public readonly IClientControl clientControl;
+        public BaseController(IOptions<AppSettings> iOptions, IClientControl iClient, ICacheService icacheService)
         {
             appConfig = iOptions.Value;
             clientControl = iClient;
-
-            cacheService = new CacheService();
+            cacheService = icacheService;            
         }
 
 

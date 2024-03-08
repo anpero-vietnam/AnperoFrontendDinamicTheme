@@ -9,19 +9,23 @@ namespace AnperoFrontend.Bussiness
         public AnperoClient GetClient(AppSettings appSettings,string currentRawUrl)
         {
             AnperoClient anperoClient = new AnperoClient();
-            if (appSettings.IsInternal)
+            if(appSettings != null && !string.IsNullOrEmpty(currentRawUrl))
             {
-                /// Get Client from database which Domain
-            
-            }
-            else
-            {
-                anperoClient.ClientId = appSettings.ClientId;
-                anperoClient.Token = appSettings.TokenKey;
-                /// get  from appseting file
+                if (appSettings.IsInternal)
+                {
+                    /// Get client information through the service through the current domain
+
+                }
+                else
+                {
+                    /// get  from appseting file,  used for independent sites deployed
+                    anperoClient.ClientId = appSettings.ClientId;
+                    anperoClient.Token = appSettings.TokenKey;                   
 
 
+                }
             }
+          
             return anperoClient;
         }
     }
