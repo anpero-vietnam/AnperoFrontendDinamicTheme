@@ -21,16 +21,15 @@
         public string Footer { get; set; } = string.Empty;
         public string Logo { get; set; } = string.Empty;
         public string Desc { get; set; } = string.Empty;
-        public List<ProductCategory> ProductCategoryList { get; set; } = new List<ProductCategory>();
-        public List<ProductGroup> ProductGroupList { get; set; } = new List<ProductGroup>();
-        public string Email { get; set; } = string.Empty;
+        //public List<ProductCategory> ProductCategoryList { get; set; } = new List<ProductCategory>();
+        //public List<ProductGroup> ProductGroupList { get; set; } = new List<ProductGroup>();
+        //public string Email { get; set; } = string.Empty;
 
-        public string Address { get; set; } = string.Empty;
+        //public string Address { get; set; } = string.Empty;
 
-        public string AnperoPlugin { get; set; } = string.Empty;
-        public string Name { get; set; } = string.Empty;
-        public int ThemeOption { get; set; }
-        public List<ProductPropertiesModel> ProductProperties { get; set; } = new List<ProductPropertiesModel>();
-        public string Favicon { get; set; } = string.Empty;
+        //public string AnperoPlugin { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;        
+        //public List<ProductPropertiesModel> ProductProperties { get; set; } = new List<ProductPropertiesModel>();
+        //public string Favicon { get; set; } = string.Empty;
     }
 }

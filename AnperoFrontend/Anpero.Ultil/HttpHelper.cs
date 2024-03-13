@@ -11,22 +11,22 @@ namespace Anpero.Ultil
     {
         private static readonly HttpClient client = new HttpClient();
 
-        public static T? Post(string url, object paramObject)
+        public static async Task<T?> Post(string url, object paramObject)
         {
 
             string json = "";
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
             var content = new FormUrlEncodedContent(ObjectToDictionary(paramObject));
-            var response = client.PostAsync(url, content).Result;
-            json = response.Content.ReadAsStringAsync().Result;
+            var response =await client.PostAsync(url, content);
+            json = await response.Content.ReadAsStringAsync();
             if (json != "")
             {
                 try
                 {
                     return JsonSerializer.Deserialize<T>(json);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return default(T);
                 }

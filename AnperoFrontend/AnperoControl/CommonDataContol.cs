@@ -12,10 +12,10 @@ namespace AnperoControl
         {
             appSettings = iOptions.Value;
         }
-        public CommonDataModel? GetCommonDataModel(AnperoClient client)
+        public async Task<CommonDataModel?> GetCommonDataModel(AnperoClient client)
         {
            var  apiUrl =  appSettings.ApiUrl.TrimEnd('/');
-           return HttpHelper<CommonDataModel?>.Post(apiUrl+ "/api/CommonData", client)??new CommonDataModel();
+           return await HttpHelper<CommonDataModel?>.Post(apiUrl+ "/api/CommonData", client)??new CommonDataModel();
         }
     }
 }
