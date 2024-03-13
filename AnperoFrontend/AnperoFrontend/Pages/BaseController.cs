@@ -26,15 +26,14 @@ namespace AnperoFrontend.Pages
             clientControl = iClient;
             this.commonDataControl = commonDataControl;            
         }
-        public void OnGet()
+        public  void OnGet()
         {
             InitCommonDataData();
-        }
-        private void InitCommonDataData()
-        {
             
-            var x = commonDataControl.GetCommonDataModel(anperoClient);
-            ViewData["commonData"] = commonDataControl.GetCommonDataModel(anperoClient);
+        }
+        private  void InitCommonDataData()
+        {   
+            ViewData["commonData"] = commonDataControl.GetCommonDataModel(anperoClient).Result;
         }
         public AnperoClient anperoClient
         {

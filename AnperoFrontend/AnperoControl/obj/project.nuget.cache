@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9EbM3/2pKbRQRkIhVhX+d5fN8cC52IbugDeBjvm9vw794nVHFWWDW5VCZfLCNOGeEhb6CrWrr08gshTixjzhYA==",
+  "dgSpecHash": "9MdSaEpA+go8lIjselRu2RKmsfHTcwnEmN8MFqf53J8JhgO4+0IhMMDmO1SBRcz4i8LEtFSYHN6VwT0YYyHo0Q==",
   "success": true,
-  "projectFilePath": "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoControl\\AnperoControl.csproj",
+  "projectFilePath": "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoControl\\AnperoControl.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\thang\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\thang\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",

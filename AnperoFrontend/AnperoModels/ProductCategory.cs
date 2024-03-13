@@ -11,9 +11,8 @@ namespace AnperoModels
     {
      
         public int Rank { get; set; }
-        
-        List<ProductCategory> childCategory;     
-        public string DefaultLink
+        public string DefaultLink { get; set; }=string.Empty;
+        public string Link
         {
             get
             {
@@ -26,16 +25,11 @@ namespace AnperoModels
                     return DefaultLink;
                 }
             }
-            set
-            {
-                DefaultLink = value;
-            }
-
         }
         public string Name { get; set; } = string.Empty;
         public int Id { get; set; }
 
-        public List<ProductCategory> ChildCategory { get; set; }
+        public List<ProductCategory> ChildCategory { get; set; }= new List<ProductCategory>();  
 
         public string Images { get; set; }=string.Empty;    
 

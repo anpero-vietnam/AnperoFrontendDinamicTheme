@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoControl\\AnperoControl.csproj": {}
+    "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoControl\\AnperoControl.csproj": {}
   },
   "projects": {
-    "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj": {
+    "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj",
+        "projectUniqueName": "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj",
         "projectName": "Anpero.Ultil",
-        "projectPath": "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj",
+        "projectPath": "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj",
         "packagesPath": "C:\\Users\\thang\\.nuget\\packages\\",
-        "outputPath": "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\obj\\",
+        "outputPath": "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\thang\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,25 +65,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoControl\\AnperoControl.csproj": {
+    "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoControl\\AnperoControl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoControl\\AnperoControl.csproj",
+        "projectUniqueName": "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoControl\\AnperoControl.csproj",
         "projectName": "AnperoControl",
-        "projectPath": "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoControl\\AnperoControl.csproj",
+        "projectPath": "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoControl\\AnperoControl.csproj",
         "packagesPath": "C:\\Users\\thang\\.nuget\\packages\\",
-        "outputPath": "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoControl\\obj\\",
+        "outputPath": "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoControl\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\thang\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,11 +93,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj": {
-                "projectPath": "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj"
+              "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj": {
+                "projectPath": "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj"
               },
-              "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoModels\\AnperoModels.csproj": {
-                "projectPath": "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoModels\\AnperoModels.csproj"
+              "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoModels\\AnperoModels.csproj": {
+                "projectPath": "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoModels\\AnperoModels.csproj"
               }
             }
           }
@@ -141,25 +133,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoModels\\AnperoModels.csproj": {
+    "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoModels\\AnperoModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoModels\\AnperoModels.csproj",
+        "projectUniqueName": "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoModels\\AnperoModels.csproj",
         "projectName": "AnperoModels",
-        "projectPath": "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoModels\\AnperoModels.csproj",
+        "projectPath": "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoModels\\AnperoModels.csproj",
         "packagesPath": "C:\\Users\\thang\\.nuget\\packages\\",
-        "outputPath": "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoModels\\obj\\",
+        "outputPath": "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoModels\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\thang\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -173,8 +161,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj": {
-                "projectPath": "F:\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj"
+              "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj": {
+                "projectPath": "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj"
               }
             }
           }
@@ -204,7 +192,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
