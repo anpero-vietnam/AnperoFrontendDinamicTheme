@@ -38,15 +38,13 @@ namespace AnperoFrontend.Pages
         public AnperoClient anperoClient
         {
             get
-            {
-                var rawUrl = $"{Request.Scheme}://{Request.Host}";
-                return clientControl.GetClient(rawUrl);
+            {                
+                return clientControl.GetClient();
             }
         }
       
         public  string GetContent(int moduleId)
-        {
-            
+        {            
             return "<p>blabla @RenderBody()</p>";
         }
 

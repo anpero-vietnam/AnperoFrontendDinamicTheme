@@ -16,6 +16,18 @@
           "AnperoControl.dll": {}
         }
       },
+      "Microsoft.CSharp/4.7.0": {},
+      "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Caching.Abstractions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
         "runtime": {
           "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
@@ -55,6 +67,53 @@
           }
         }
       },
+      "ServiceStack.Common/8.2.2": {
+        "dependencies": {
+          "ServiceStack.Interfaces": "8.2.2",
+          "ServiceStack.Text": "8.2.2",
+          "System.Memory": "4.5.5"
+        },
+        "runtime": {
+          "lib/net6.0/ServiceStack.Common.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "8.2.2.0"
+          }
+        }
+      },
+      "ServiceStack.Interfaces/8.2.2": {
+        "runtime": {
+          "lib/net6.0/ServiceStack.Interfaces.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "8.2.2.0"
+          }
+        }
+      },
+      "ServiceStack.Redis/8.2.2": {
+        "dependencies": {
+          "ServiceStack.Common": "8.2.2",
+          "ServiceStack.Interfaces": "8.2.2",
+          "ServiceStack.Text": "8.2.2"
+        },
+        "runtime": {
+          "lib/net6.0/ServiceStack.Redis.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "8.2.2.0"
+          }
+        }
+      },
+      "ServiceStack.Text/8.2.2": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "System.Diagnostics.DiagnosticSource": "8.0.0",
+          "System.Memory": "4.5.5"
+        },
+        "runtime": {
+          "lib/net6.0/ServiceStack.Text.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "8.2.2.0"
+          }
+        }
+      },
       "System.Configuration.ConfigurationManager/8.0.0": {
         "dependencies": {
           "System.Security.Cryptography.ProtectedData": "8.0.0"
@@ -66,6 +125,18 @@
           }
         }
       },
+      "System.Diagnostics.DiagnosticSource/8.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
+      "System.Memory/4.5.5": {},
       "System.Runtime.Caching/8.0.0": {
         "dependencies": {
           "System.Configuration.ConfigurationManager": "8.0.0"
@@ -96,7 +167,11 @@
       },
       "Anpero.Ultil/1.0.0": {
         "dependencies": {
+          "AnperoModels": "1.0.0",
+          "Microsoft.Extensions.Caching.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Options": "8.0.2",
           "Newtonsoft.Json": "13.0.3",
+          "ServiceStack.Redis": "8.2.2",
           "System.Runtime.Caching": "8.0.0"
         },
         "runtime": {
@@ -104,9 +179,6 @@
         }
       },
       "AnperoModels/1.0.0": {
-        "dependencies": {
-          "Anpero.Ultil": "1.0.0"
-        },
         "runtime": {
           "AnperoModels.dll": {}
         }
@@ -118,6 +190,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3KuSxeHoNYdxVYfg2IRZCThcrlJ1XJqIXkAWikCsbm5C/bCjv7G0WoKDyuR98Q+T607QT2Zl5GsbGRkENcV2yQ==",
+      "path": "microsoft.extensions.caching.abstractions/8.0.0",
+      "hashPath": "microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
       "type": "package",
@@ -147,12 +233,54 @@
       "path": "newtonsoft.json/13.0.3",
       "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     },
+    "ServiceStack.Common/8.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QSXCHFrT2TtkCVdPx2+lGp/XB3pRVJPn4HXXwmQkkcKklraMDM0rk005gN220mHjb7xCViSzYnjaO+skrj1eQg==",
+      "path": "servicestack.common/8.2.2",
+      "hashPath": "servicestack.common.8.2.2.nupkg.sha512"
+    },
+    "ServiceStack.Interfaces/8.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KpQT8tH+d2dPksdGhuLdmBySsd8c8XInSsh6sgdZ/E74PBn/Yay4HBveWXfhiIN7asSXV32IjBw6FvHtWAtv0A==",
+      "path": "servicestack.interfaces/8.2.2",
+      "hashPath": "servicestack.interfaces.8.2.2.nupkg.sha512"
+    },
+    "ServiceStack.Redis/8.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-p1SL6K1JubxZFNUUR1xngtm8M701WHUbCnNWeP9yIcmu4FvprE4nmPx4DlvY4jK9PADJnQEv7xzSi6XEL00zlQ==",
+      "path": "servicestack.redis/8.2.2",
+      "hashPath": "servicestack.redis.8.2.2.nupkg.sha512"
+    },
+    "ServiceStack.Text/8.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2WrX0g2eN6L4SnD8lwRhy3Gcopvs/4l9LHMed67fpfcjIr/WwHhBfKANQx1BL2YZN7t4zWikxOJYsUJI5PB1Aw==",
+      "path": "servicestack.text/8.2.2",
+      "hashPath": "servicestack.text.8.2.2.nupkg.sha512"
+    },
     "System.Configuration.ConfigurationManager/8.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-JlYi9XVvIREURRUlGMr1F6vOFLk7YSY4p1vHo4kX3tQ0AGrjqlRWHDi66ImHhy6qwXBG3BJ6Y1QlYQ+Qz6Xgww==",
       "path": "system.configuration.configurationmanager/8.0.0",
       "hashPath": "system.configuration.configurationmanager.8.0.0.nupkg.sha512"
+    },
+    "System.Diagnostics.DiagnosticSource/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-c9xLpVz6PL9lp/djOWtk5KPDZq3cSYpmXoJQY524EOtuFl5z9ZtsotpsyrDW40U1DRnQSYvcPKEUV0X//u6gkQ==",
+      "path": "system.diagnostics.diagnosticsource/8.0.0",
+      "hashPath": "system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
+      "path": "system.memory/4.5.5",
+      "hashPath": "system.memory.4.5.5.nupkg.sha512"
     },
     "System.Runtime.Caching/8.0.0": {
       "type": "package",

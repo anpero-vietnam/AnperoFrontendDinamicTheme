@@ -1,5 +1,6 @@
 using Anpero;
 using Anpero.Ultil;
+using Anpero.Ultil.Caching;
 using AnperoControl;
 using AnperoControl.Inteface;
 using AnperoFrontend.Bussiness;
@@ -11,9 +12,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 builder.Services.AddSingleton<IClientControl, ClientControl>();
-builder.Services.AddSingleton<ICacheService, CacheService>();
+builder.Services.AddMemoryCache();
+builder.Services.AddSingleton<ICacheService, CacheHelper>();
 builder.Services.AddSingleton<ICommonDataControl, CommonDataControl>();
-
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 

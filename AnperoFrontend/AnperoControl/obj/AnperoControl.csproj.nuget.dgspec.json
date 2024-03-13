@@ -27,7 +27,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoModels\\AnperoModels.csproj": {
+                "projectPath": "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\AnperoModels\\AnperoModels.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -40,9 +44,21 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.Extensions.Caching.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "ServiceStack.Redis": {
+              "target": "Package",
+              "version": "[8.2.2, )"
             },
             "System.Runtime.Caching": {
               "target": "Package",
@@ -160,11 +176,7 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {
-              "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj": {
-                "projectPath": "E:\\hub\\AnperoFrontend\\AnperoFrontendDinamicTheme\\AnperoFrontend\\Anpero.Ultil\\Anpero.Ultil.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

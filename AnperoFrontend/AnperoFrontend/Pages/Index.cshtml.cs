@@ -25,7 +25,7 @@ namespace AnperoFrontend.Pages
         {
             
             var rawUrl = $"{Request.Scheme}://{Request.Host}";
-            _client.GetClient(rawUrl);
+            _client.GetClient();
             return "<div>XXXXX</div>";
         }
     }
