@@ -1,7 +1,10 @@
 ﻿@model BaseController
+@using AnperoModels;
 @using Anpero.Ultil;
 @{
     string[] bodyHtml = Model.GetContent(1).Split("@RenderBody()");
+    CommonDataModel? _commonData = (CommonDataModel?)ViewData["commonData"];
+    CommonDataModel commonData = _commonData ?? new CommonDataModel();
 }
 <!DOCTYPE html>
 <html lang="vi">

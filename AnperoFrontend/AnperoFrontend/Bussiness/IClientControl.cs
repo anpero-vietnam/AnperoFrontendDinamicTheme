@@ -4,6 +4,6 @@ namespace AnperoFrontend.Bussiness
 {
     public interface IClientControl
     {
-        AnperoClient GetClient(AppSettings appSettings, string currentRawUrl);
+        AnperoClient GetClient(string currentRawUrl);
     }
 }

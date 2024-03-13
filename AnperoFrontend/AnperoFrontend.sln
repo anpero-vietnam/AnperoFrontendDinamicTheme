@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnperoModels", "AnperoModel
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anpero.Ultil", "Anpero.Ultil\Anpero.Ultil.csproj", "{1341FD76-BF7D-480F-949D-6639CDB1E3C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnperoFrontendTests", "AnperoFrontendTests\AnperoFrontendTests.csproj", "{4AE79214-0729-4497-877E-81F4E486B182}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnperoControl", "AnperoControl\AnperoControl.csproj", "{09725CAE-9480-4271-A895-A54E02D41511}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{1341FD76-BF7D-480F-949D-6639CDB1E3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1341FD76-BF7D-480F-949D-6639CDB1E3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1341FD76-BF7D-480F-949D-6639CDB1E3C0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4AE79214-0729-4497-877E-81F4E486B182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4AE79214-0729-4497-877E-81F4E486B182}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4AE79214-0729-4497-877E-81F4E486B182}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4AE79214-0729-4497-877E-81F4E486B182}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09725CAE-9480-4271-A895-A54E02D41511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09725CAE-9480-4271-A895-A54E02D41511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09725CAE-9480-4271-A895-A54E02D41511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09725CAE-9480-4271-A895-A54E02D41511}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -72,6 +72,7 @@
             ParentCategory = "0";
             Brands = string.Empty;
             Property = string.Empty;
+            priceRank=string.Empty;
 
         }
 

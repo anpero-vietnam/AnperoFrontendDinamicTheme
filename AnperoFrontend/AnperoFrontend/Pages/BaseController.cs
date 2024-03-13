@@ -2,34 +2,52 @@
 using Anpero.Ultil;
 using AnperoFrontend.Bussiness;
 using AnperoModels;
+using AnperoControl;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using System.Configuration;
-
+using System.Security.AccessControl;
+using AnperoControl.Inteface;
 
 namespace AnperoFrontend.Pages
 {
     public class BaseController : PageModel
     {
-        private readonly AppSettings appConfig;
-        private readonly ICacheService cacheService = new CacheService();
-        readonly IClientControl clientControl;
-        public BaseController(IOptions<AppSettings> iOptions, IClientControl iClient, ICacheService icacheService)
+
+        private readonly ICommonDataControl commonDataControl;        
+        readonly IClientControl clientControl;        
+
+        public BaseController(IClientControl iClient, ICommonDataControl commonDataControl)
         {
-            appConfig = iOptions.Value;
+            
             clientControl = iClient;
-            cacheService = icacheService;            
+            this.commonDataControl = commonDataControl;            
         }
         public void OnGet()
         {
-            var rawUrl = $"{Request.Scheme}://{Request.Host}";
-            var client = clientControl.GetClient(appConfig, rawUrl);
+            InitCommonDataData();
         }
+        private void InitCommonDataData()
+        {
+            
+            var x = commonDataControl.GetCommonDataModel(anperoClient);
+            ViewData["commonData"] = commonDataControl.GetCommonDataModel(anperoClient);
+        }
+        public AnperoClient anperoClient
+        {
+            get
+            {
+                var rawUrl = $"{Request.Scheme}://{Request.Host}";
+                return clientControl.GetClient(rawUrl);
+            }
+        }
+      
         public  string GetContent(int moduleId)
         {
+            
             return "<p>blabla @RenderBody()</p>";
         }
 

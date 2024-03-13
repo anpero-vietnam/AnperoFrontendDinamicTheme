@@ -1,7 +1,14 @@
 ﻿@page
 @model IndexModel
+@using AnperoModels;
 @{
-    ViewData["Title"] = "Home page";
+
+    CommonDataModel? _commonData = (CommonDataModel?)ViewData["commonData"];
+    var commonData = _commonData ?? new CommonDataModel();
+    ViewBag.description = commonData.Desc;
+    ViewBag.Title = commonData.Name;
+
 }
-<p>Text in home page</p>
+
+<p>@Model.Test()</p>
 

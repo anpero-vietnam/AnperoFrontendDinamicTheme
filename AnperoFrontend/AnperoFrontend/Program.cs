@@ -1,8 +1,9 @@
 using Anpero;
 using Anpero.Ultil;
+using AnperoControl;
+using AnperoControl.Inteface;
 using AnperoFrontend.Bussiness;
-using Microsoft.AspNetCore.ResponseCompression;
-using System.IO.Compression;
+using AnperoModels;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddRazorPages();
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 builder.Services.AddSingleton<IClientControl, ClientControl>();
 builder.Services.AddSingleton<ICacheService, CacheService>();
+builder.Services.AddSingleton<ICommonDataControl, CommonDataControl>();
 
 
 var app = builder.Build();

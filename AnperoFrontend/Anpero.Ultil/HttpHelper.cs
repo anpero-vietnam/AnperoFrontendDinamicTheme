@@ -1,12 +1,13 @@
-﻿using Newtonsoft.Json;
+﻿
 using System.Net;
 using System.Net.Http.Headers;
 using System.Reflection;
 using System.Text;
+using System.Text.Json;
 
 namespace Anpero.Ultil
 {
-    class HttpHelper<T>
+    public class HttpHelper<T>
     {
         private static readonly HttpClient client = new HttpClient();
 
@@ -23,11 +24,10 @@ namespace Anpero.Ultil
             {
                 try
                 {
-                    return JsonConvert.DeserializeObject<T>(json);
+                    return JsonSerializer.Deserialize<T>(json);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-
                     return default(T);
                 }
 
@@ -43,7 +43,7 @@ namespace Anpero.Ultil
             string json = "";
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
-            var dataJson = JsonConvert.SerializeObject(paramObject);
+            var dataJson = JsonSerializer.Serialize(paramObject);
             var content = new StringContent(dataJson, Encoding.UTF8, "application/json");
             var response = client.PostAsync(url, content).Result;
             json = response.Content.ReadAsStringAsync().Result;
@@ -51,7 +51,7 @@ namespace Anpero.Ultil
             {
                 try
                 {
-                    return JsonConvert.DeserializeObject<T>(json);
+                    return JsonSerializer.Deserialize<T>(json);
                 }
                 catch (Exception ex)
                 {
@@ -70,7 +70,7 @@ namespace Anpero.Ultil
 
             try
             {
-                var dataJson = JsonConvert.SerializeObject(paramObject);
+                var dataJson = JsonSerializer.Serialize(paramObject);
                 ServicePointManager.Expect100Continue = true;
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
                 var content = new StringContent(dataJson, Encoding.UTF8, "application/json");
@@ -112,7 +112,7 @@ namespace Anpero.Ultil
                 if (json != "")
                 {
 
-                    return JsonConvert.DeserializeObject<T>(json);
+                    return JsonSerializer.Deserialize<T>(json);
                 }
                 else
                 {

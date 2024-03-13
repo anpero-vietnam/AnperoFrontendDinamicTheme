@@ -1,4 +1,5 @@
 ﻿using Anpero;
+using AnperoControl.Inteface;
 using AnperoFrontend.Bussiness;
 using AnperoModels;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +12,12 @@ namespace AnperoFrontend.Pages
 
         
         private readonly IClientControl _client;
-        private readonly AppSettings _appSetting;
+        private readonly ICommonDataControl commonDataContol;
 
-        public IndexModel(IOptions<AppSettings> iOptions, IClientControl iClient, ICacheService icacheService) : base(iOptions, iClient, icacheService)
+
+        public IndexModel(IClientControl iClient, ICommonDataControl commonDataContol) : base (iClient, commonDataContol)
         {
-            _appSetting = iOptions.Value;
+            this.commonDataContol = commonDataContol;   
             _client = iClient;
         }
      
@@ -23,7 +25,7 @@ namespace AnperoFrontend.Pages
         {
             
             var rawUrl = $"{Request.Scheme}://{Request.Host}";
-            _client.GetClient(_appSetting,rawUrl);
+            _client.GetClient(rawUrl);
             return "<div>XXXXX</div>";
         }
     }

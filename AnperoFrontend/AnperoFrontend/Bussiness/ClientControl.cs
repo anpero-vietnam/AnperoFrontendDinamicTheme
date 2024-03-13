@@ -5,8 +5,11 @@ namespace AnperoFrontend.Bussiness
 {
     public class ClientControl : IClientControl
     {
-        public ClientControl() { } 
-        public AnperoClient GetClient(AppSettings appSettings,string currentRawUrl)
+        private readonly AppSettings appSettings;
+        public ClientControl(IOptions<AppSettings> iOptions) {
+            appSettings = iOptions.Value;
+        } 
+        public AnperoClient GetClient(string currentRawUrl)
         {
             AnperoClient anperoClient = new AnperoClient();
             if(appSettings != null && !string.IsNullOrEmpty(currentRawUrl))
@@ -19,7 +22,7 @@ namespace AnperoFrontend.Bussiness
                 else
                 {
                     /// get  from appseting file,  used for independent sites deployed
-                    anperoClient.ClientId = appSettings.ClientId;
+                    anperoClient.StoreId = appSettings.ClientId;
                     anperoClient.Token = appSettings.TokenKey;                   
                 }
             }
