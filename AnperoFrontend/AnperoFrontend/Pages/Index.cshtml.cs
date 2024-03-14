@@ -1,9 +1,10 @@
-﻿using Anpero;
+﻿
 using AnperoControl.Inteface;
 using AnperoFrontend.Bussiness;
 using AnperoModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using System.Text;
 
 namespace AnperoFrontend.Pages
 {
@@ -11,21 +12,22 @@ namespace AnperoFrontend.Pages
     {
 
         
-        private readonly IClientControl _client;
-        private readonly ICommonDataControl commonDataContol;
+        //private readonly IClientControl _client;
+        //private readonly ICommonDataControl commonDataContol;
 
 
         public IndexModel(IClientControl iClient, ICommonDataControl commonDataContol) : base (iClient, commonDataContol)
         {
-            this.commonDataContol = commonDataContol;   
-            _client = iClient;
+            //this.commonDataContol = commonDataContol;   
+            //_client = iClient;
         }
      
         public string Test()
         {
+
+            StringBuilder stringBuilder = new StringBuilder();
             
-            var rawUrl = $"{Request.Scheme}://{Request.Host}";
-            _client.GetClient();
+            clientControl.GetClient();
             return "<div>XXXXX</div>";
         }
     }

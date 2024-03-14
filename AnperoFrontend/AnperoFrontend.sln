@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnperoModels", "AnperoModel
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anpero.Ultil", "Anpero.Ultil\Anpero.Ultil.csproj", "{1341FD76-BF7D-480F-949D-6639CDB1E3C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnperoControl", "AnperoControl\AnperoControl.csproj", "{09725CAE-9480-4271-A895-A54E02D41511}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnperoControl", "AnperoControl\AnperoControl.csproj", "{09725CAE-9480-4271-A895-A54E02D41511}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A0A89512-E58B-4317-AA8F-EEB4BBA14106}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

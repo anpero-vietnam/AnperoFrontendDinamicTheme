@@ -3,12 +3,11 @@
 @using AnperoModels;
 @{
 
-    CommonDataModel? _commonData = (CommonDataModel?)ViewData["commonData"];
-    var commonData = _commonData ?? new CommonDataModel();
-    ViewBag.description = commonData.Desc;
-    ViewBag.Title = commonData.Name;
-
+    ViewBag.description =Model.commonData.Desc;
+    ViewBag.Title = Model.commonData.Name;
+    ViewBag.GraphImage = Model.commonData.Logo;
 }
 
 <p>@Model.Test()</p>
 
+ 

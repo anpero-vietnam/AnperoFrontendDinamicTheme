@@ -3,8 +3,7 @@
 @using Anpero.Ultil;
 @{
     string[] bodyHtml = Model.GetContent(1).Split("@RenderBody()");
-    CommonDataModel? _commonData = (CommonDataModel?)ViewData["commonData"];
-    CommonDataModel commonData = _commonData ?? new CommonDataModel();
+ 
 }
 <!DOCTYPE html>
 <html lang="vi">
@@ -13,7 +12,7 @@
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <title>@ViewBag.Title</title>
     <meta name="description" content="@StringHelper.RemoveSpecialCharacters(ViewBag.description)" />
-    <meta name="keywords" content="@ViewData["keywords"]" />
+    <meta name="keywords" content="@ViewBag.keywords" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:locale" content="vi_VN" />
     <meta property="og:type" content="website" />
@@ -34,11 +33,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="" />
     <meta name="title" property="og:title" content="" />
-    <meta property="og:url" content="" />
-    <meta name="image" property="og:image" content="" />
+    <meta property="og:url" content="@Model.CurrentUrl" />
+    <meta name="image" property="og:image" content="@ViewBag.GraphImage" />
     <meta name="description" property="og:description" content="@StringHelper.RemoveSpecialCharacters(ViewBag.description)" />
     <meta property="og:locale" content="vi_VN" />
     <meta name="thumbnail" content="@ViewBag.GraphImage" />
+    <link rel="shortcut icon" type="image/x-icon" href="@Model.commonData.Favicon" />
+    <link rel="icon" type="image/png" href="@Model.commonData.Favicon" />
     @await RenderSectionAsync("head", required: false)
 </head>
 <body>
