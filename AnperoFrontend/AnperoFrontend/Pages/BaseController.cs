@@ -2,6 +2,8 @@
 using AnperoModels;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using AnperoControl.Inteface;
+using Microsoft.AspNetCore.Mvc;
+using ServiceStack;
 
 namespace AnperoFrontend.Pages
 {
@@ -49,11 +51,11 @@ namespace AnperoFrontend.Pages
                 return $"{Request.Scheme}://{Request.Host}{Request.Path}{Request.QueryString}";
             }
         }
-        public  string GetContent(int moduleId)
+        public  string GetMainLayoutContent()
         {            
             return "<p>blabla @RenderBody()</p>";
         }
-
+       
     }
 
 }

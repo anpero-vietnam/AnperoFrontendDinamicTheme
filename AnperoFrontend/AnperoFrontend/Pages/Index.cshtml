@@ -7,7 +7,4 @@
     ViewBag.Title = Model.commonData.Name;
     ViewBag.GraphImage = Model.commonData.Logo;
 }
-
-<p>@Model.Test()</p>
-
- 
+@await Component.InvokeAsync(typeof(ModuleViewComponent), new {moduleId=Modules.HomePage})

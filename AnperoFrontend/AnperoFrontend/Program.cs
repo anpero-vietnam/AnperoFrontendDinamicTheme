@@ -5,6 +5,7 @@ using AnperoControl;
 using AnperoControl.Inteface;
 using AnperoFrontend.Bussiness;
 using AnperoModels;
+using ServiceStack;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,7 +33,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
- 
+
 app.UseAuthorization();
 
 app.MapRazorPages();
