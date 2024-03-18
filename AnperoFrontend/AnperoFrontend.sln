@@ -19,23 +19,32 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Prod|Any CPU = Prod|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3DF8BD89-CFCE-40B2-933D-F19E27519EB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3DF8BD89-CFCE-40B2-933D-F19E27519EB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF8BD89-CFCE-40B2-933D-F19E27519EB0}.Prod|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF8BD89-CFCE-40B2-933D-F19E27519EB0}.Prod|Any CPU.Build.0 = Release|Any CPU
 		{3DF8BD89-CFCE-40B2-933D-F19E27519EB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DF8BD89-CFCE-40B2-933D-F19E27519EB0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EEF8A76E-C36F-4260-9015-8C75619F3EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EEF8A76E-C36F-4260-9015-8C75619F3EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEF8A76E-C36F-4260-9015-8C75619F3EDE}.Prod|Any CPU.ActiveCfg = Prod|Any CPU
+		{EEF8A76E-C36F-4260-9015-8C75619F3EDE}.Prod|Any CPU.Build.0 = Prod|Any CPU
 		{EEF8A76E-C36F-4260-9015-8C75619F3EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEF8A76E-C36F-4260-9015-8C75619F3EDE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1341FD76-BF7D-480F-949D-6639CDB1E3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1341FD76-BF7D-480F-949D-6639CDB1E3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1341FD76-BF7D-480F-949D-6639CDB1E3C0}.Prod|Any CPU.ActiveCfg = Prod|Any CPU
+		{1341FD76-BF7D-480F-949D-6639CDB1E3C0}.Prod|Any CPU.Build.0 = Prod|Any CPU
 		{1341FD76-BF7D-480F-949D-6639CDB1E3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1341FD76-BF7D-480F-949D-6639CDB1E3C0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{09725CAE-9480-4271-A895-A54E02D41511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{09725CAE-9480-4271-A895-A54E02D41511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09725CAE-9480-4271-A895-A54E02D41511}.Prod|Any CPU.ActiveCfg = Prod|Any CPU
+		{09725CAE-9480-4271-A895-A54E02D41511}.Prod|Any CPU.Build.0 = Prod|Any CPU
 		{09725CAE-9480-4271-A895-A54E02D41511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09725CAE-9480-4271-A895-A54E02D41511}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
