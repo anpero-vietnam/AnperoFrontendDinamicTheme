@@ -1,10 +1,10 @@
 ﻿@page
 @model IndexModel
-@using AnperoModels;
+@using AnperoEnum;
 @{
 
     ViewBag.description =Model.commonData.Desc;
     ViewBag.Title = Model.commonData.Name;
     ViewBag.GraphImage = Model.commonData.Logo;
 }
-@await Component.InvokeAsync(typeof(ModuleViewComponent), new {moduleId=Modules.HomePage})
+@await Component.InvokeAsync(typeof(ModuleViewComponent), new {moduleId=Modules.HomePage,client=Model.anperoClient})

@@ -1,0 +1,11 @@
+F:\AnperoFrontendDinamicTheme\AnperoFrontend\AnperoEnum\bin\Debug\net6.0\AnperoEnum.deps.json
+F:\AnperoFrontendDinamicTheme\AnperoFrontend\AnperoEnum\bin\Debug\net6.0\AnperoEnum.dll
+F:\AnperoFrontendDinamicTheme\AnperoFrontend\AnperoEnum\bin\Debug\net6.0\AnperoEnum.pdb
+F:\AnperoFrontendDinamicTheme\AnperoFrontend\AnperoEnum\obj\Debug\net6.0\AnperoEnum.GeneratedMSBuildEditorConfig.editorconfig
+F:\AnperoFrontendDinamicTheme\AnperoFrontend\AnperoEnum\obj\Debug\net6.0\AnperoEnum.AssemblyInfoInputs.cache
+F:\AnperoFrontendDinamicTheme\AnperoFrontend\AnperoEnum\obj\Debug\net6.0\AnperoEnum.AssemblyInfo.cs
+F:\AnperoFrontendDinamicTheme\AnperoFrontend\AnperoEnum\obj\Debug\net6.0\AnperoEnum.csproj.CoreCompileInputs.cache
+F:\AnperoFrontendDinamicTheme\AnperoFrontend\AnperoEnum\obj\Debug\net6.0\AnperoEnum.dll
+F:\AnperoFrontendDinamicTheme\AnperoFrontend\AnperoEnum\obj\Debug\net6.0\refint\AnperoEnum.dll
+F:\AnperoFrontendDinamicTheme\AnperoFrontend\AnperoEnum\obj\Debug\net6.0\AnperoEnum.pdb
+F:\AnperoFrontendDinamicTheme\AnperoFrontend\AnperoEnum\obj\Debug\net6.0\ref\AnperoEnum.dll

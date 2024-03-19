@@ -1,4 +1,4 @@
-﻿namespace AnperoModels
+﻿namespace AnperoEnum
 {
     public class SearchModel
     {
@@ -72,7 +72,7 @@
             ParentCategory = "0";
             Brands = string.Empty;
             Property = string.Empty;
-            priceRank=string.Empty;
+            priceRank = string.Empty;
 
         }
 

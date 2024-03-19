@@ -7,20 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Pages\Error.cshtml.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="Pages\Error.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Anpero.Ultil\Anpero.Ultil.csproj" />
     <ProjectReference Include="..\AnperoControl\AnperoControl.csproj" />
+    <ProjectReference Include="..\AnperoEnum\AnperoEnum.csproj" />
     <ProjectReference Include="..\AnperoModels\AnperoModels.csproj" />
   </ItemGroup>
 

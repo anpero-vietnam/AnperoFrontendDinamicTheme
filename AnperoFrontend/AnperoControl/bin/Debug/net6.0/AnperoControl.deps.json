@@ -9,6 +9,7 @@
       "AnperoControl/1.0.0": {
         "dependencies": {
           "Anpero.Ultil": "1.0.0",
+          "AnperoEnum": "1.0.0",
           "AnperoModels": "1.0.0",
           "Microsoft.Extensions.Options": "8.0.2"
         },
@@ -178,6 +179,11 @@
           "Anpero.Ultil.dll": {}
         }
       },
+      "AnperoEnum/1.0.0": {
+        "runtime": {
+          "AnperoEnum.dll": {}
+        }
+      },
       "AnperoModels/1.0.0": {
         "runtime": {
           "AnperoModels.dll": {}
@@ -304,6 +310,11 @@
       "hashPath": "system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
     },
     "Anpero.Ultil/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AnperoEnum/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

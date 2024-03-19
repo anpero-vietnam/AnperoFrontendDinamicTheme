@@ -1,21 +1,19 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
-using System.Collections;
-using System.Runtime.Caching;
-using AnperoModels;
 namespace Anpero.Ultil
 {
     internal class MemCacheProvider : ICacheService
     {
         private readonly IMemoryCache _memoryCache;
-        public MemCacheProvider(IMemoryCache memoryCache) {
+        public MemCacheProvider(IMemoryCache memoryCache)
+        {
             _memoryCache = memoryCache;
-            
-        }   
+
+        }
         public void Set<T>(string cacheKey, T objects)
         {
             try
             {
-                _memoryCache.Set(cacheKey, objects,TimeSpan.MaxValue);
+                _memoryCache.Set(cacheKey, objects, TimeSpan.MaxValue);
             }
             catch (Exception)
             {
@@ -26,7 +24,7 @@ namespace Anpero.Ultil
         {
             try
             {
-                _memoryCache.Set(cacheKey, objects,TimeSpan.FromMinutes(cacheMinutes));
+                _memoryCache.Set(cacheKey, objects, TimeSpan.FromMinutes(cacheMinutes));
 
             }
             catch (Exception)
@@ -34,7 +32,7 @@ namespace Anpero.Ultil
 
             }
         }
-  
+
         public bool TryGet<T>(string cacheKey, out T? outPut)
         {
             T? _outPut;
@@ -55,11 +53,11 @@ namespace Anpero.Ultil
             {
                 outPut = default(T);
                 return false;
-               
+
             }
-           
-            
-            
+
+
+
         }
         public bool Remove(string cacheKey)
         {
@@ -75,7 +73,7 @@ namespace Anpero.Ultil
 
         }
         public bool ResetAllCache()
-        {           
+        {
             return false;
         }
     }

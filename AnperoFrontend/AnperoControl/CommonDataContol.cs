@@ -1,33 +1,32 @@
-﻿using AnperoModels;
+﻿using Anpero;
 using Anpero.Ultil;
-using Microsoft.Extensions.Options;
 using AnperoControl.Inteface;
-using Anpero;
+using AnperoModels;
+using Microsoft.Extensions.Options;
 
 namespace AnperoControl
 {
-    public class CommonDataControl: ICommonDataControl
+    public class CommonDataControl : ICommonDataControl
     {
         private readonly AppSettings appSettings;
         private readonly ICacheService cacheService;
-        public CommonDataControl(IOptions<AppSettings> iOptions,ICacheService cacheService)
+        public CommonDataControl(IOptions<AppSettings> iOptions, ICacheService cacheService)
         {
             appSettings = iOptions.Value;
-            this.cacheService=cacheService;
+            this.cacheService = cacheService;
         }
         public async Task<CommonDataModel?> GetCommonDataModel(AnperoClient client)
         {
-           
-            var commonDataModel = new CommonDataModel();    
-           if(!cacheService.TryGet<CommonDataModel>("test", out commonDataModel))
+
+            var commonDataModel = new CommonDataModel();
+            string cacheKey = string.Format(AnperoEnum.CacheKey.CommonDataCacheKey, client.StoreId);
+            if (!cacheService.TryGet<CommonDataModel>(cacheKey, out commonDataModel))
             {
                 var apiUrl = appSettings.ApiUrl.TrimEnd('/');
-                commonDataModel= await HttpHelper<CommonDataModel?>.Post(apiUrl + "/api/CommonData", client) ?? new CommonDataModel();
-                cacheService.Set("test", commonDataModel,1);
-
-
+                commonDataModel = await HttpHelper<CommonDataModel?>.Post(apiUrl + "/api/CommonData", client) ?? new CommonDataModel();
+                cacheService.Set(cacheKey, commonDataModel, 1);
             }
-           
+
             return commonDataModel;
         }
     }

@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Anpero.Ultil\Anpero.Ultil.csproj" />
+    <ProjectReference Include="..\AnperoEnum\AnperoEnum.csproj" />
     <ProjectReference Include="..\AnperoModels\AnperoModels.csproj" />
   </ItemGroup>
 

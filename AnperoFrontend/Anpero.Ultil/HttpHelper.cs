@@ -10,7 +10,44 @@ namespace Anpero.Ultil
     public class HttpHelper<T>
     {
         private static readonly HttpClient client = new HttpClient();
+        public static async Task<T?> GetAsync(string url, object paramObject, object Client)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+            string json = "";
+            var content = ObjectToDictionary(paramObject);
+            var condition = "?";
+            foreach (KeyValuePair<string, string> entry in content)
+            {
+                url += condition + entry.Key + "=" + entry.Value;
+                condition = "&";
+            }
+            var content2 = ObjectToDictionary(Client);
+            foreach (KeyValuePair<string, string> entry2 in content2)
+            {
+                url += condition + entry2.Key + "=" + System.Web.HttpUtility.UrlEncode(entry2.Value);
+                condition = "&";
+            }
+            var response = await client.GetAsync(url);
 
+            json = response.Content.ReadAsStringAsync().Result;
+            try
+            {
+                if (json != "") 
+                {
+                    return JsonSerializer.Deserialize<T?>(json);
+                }
+                else
+                {
+                    return default(T?);
+                }
+            }
+            catch (Exception)
+            {
+
+                return default(T);
+            }
+
+        }
         public static async Task<T?> Post(string url, object paramObject)
         {
 
@@ -18,9 +55,10 @@ namespace Anpero.Ultil
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
             var content = new FormUrlEncodedContent(ObjectToDictionary(paramObject));
-            var response =await client.PostAsync(url, content);
+            var response = await client.PostAsync(url, content);
+            
             json = await response.Content.ReadAsStringAsync();
-            if (json != "")
+            if (json != "" && response.StatusCode==HttpStatusCode.OK)
             {
                 try
                 {

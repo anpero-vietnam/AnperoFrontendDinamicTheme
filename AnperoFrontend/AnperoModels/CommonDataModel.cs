@@ -28,7 +28,7 @@
         public string Address { get; set; } = string.Empty;
 
         public string AnperoPlugin { get; set; } = string.Empty;
-        public string Name { get; set; } = string.Empty;        
+        public string Name { get; set; } = string.Empty;
         public List<ProductPropertiesModel> ProductProperties { get; set; } = new List<ProductPropertiesModel>();
         public string Favicon { get; set; } = string.Empty;
     }

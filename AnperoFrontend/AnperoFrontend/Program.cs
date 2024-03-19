@@ -1,8 +1,8 @@
 using Anpero;
-using Anpero.Ultil;
 using Anpero.Ultil.Caching;
 using AnperoControl;
 using AnperoControl.Inteface;
+using AnperoControl.Interface;
 using AnperoFrontend.Bussiness;
 using AnperoModels;
 using ServiceStack;
@@ -16,6 +16,8 @@ builder.Services.AddSingleton<IClientControl, ClientControl>();
 builder.Services.AddMemoryCache();
 builder.Services.AddSingleton<ICacheService, CacheHelper>();
 builder.Services.AddSingleton<ICommonDataControl, CommonDataControl>();
+builder.Services.AddSingleton<IBuildModuleInteface, BuildModuleControl>();
+
 builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();

@@ -1,9 +1,7 @@
-﻿using AnperoFrontend.Bussiness;
+﻿using AnperoControl.Inteface;
+using AnperoFrontend.Bussiness;
 using AnperoModels;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using AnperoControl.Inteface;
-using Microsoft.AspNetCore.Mvc;
-using ServiceStack;
 
 namespace AnperoFrontend.Pages
 {
@@ -11,36 +9,36 @@ namespace AnperoFrontend.Pages
     {
 
         public readonly ICommonDataControl commonDataControl;
-        public readonly IClientControl clientControl;        
+        public readonly IClientControl clientControl;
 
         public BaseController(IClientControl iClient, ICommonDataControl commonDataControl)
         {
-            
+
             clientControl = iClient;
-            this.commonDataControl = commonDataControl;            
+            this.commonDataControl = commonDataControl;
         }
-        public  void OnGet()
-        {
-            InitCommonDataData();
-            
-        }
-        private  void InitCommonDataData()
-        {   
-            //ViewData["commonData"] = commonDataControl.GetCommonDataModel(anperoClient).Result;
-        }
-        
+        //public  void OnGet()
+        //{
+        //    InitCommonDataData();
+
+        //}
+        //private  void InitCommonDataData()
+        //{   
+
+        //}
+
         public CommonDataModel commonData
         {
             get
             {
-                CommonDataModel? _commonData = commonDataControl.GetCommonDataModel(anperoClient).Result; 
+                CommonDataModel? _commonData = commonDataControl.GetCommonDataModel(anperoClient).Result;
                 return _commonData ?? new CommonDataModel();
             }
         }
         public AnperoClient anperoClient
         {
             get
-            {                
+            {
                 return clientControl.GetClient();
             }
         }
@@ -51,11 +49,12 @@ namespace AnperoFrontend.Pages
                 return $"{Request.Scheme}://{Request.Host}{Request.Path}{Request.QueryString}";
             }
         }
-        public  string GetMainLayoutContent()
-        {            
+
+        public string GetMainLayoutContent()
+        {
             return "<p>blabla @RenderBody()</p>";
         }
-       
+
     }
 
 }

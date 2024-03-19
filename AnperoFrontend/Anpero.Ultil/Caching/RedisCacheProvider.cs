@@ -1,17 +1,15 @@
 ﻿using AnperoModels;
-using Microsoft.Extensions.Options;
-using ServiceStack.Configuration;
 using ServiceStack.Redis;
 
 namespace Anpero.Ultil.Caching
 {
     internal class RedisCacheProvider : ICacheService
     {
-        readonly RedisEndpoint _endPoint;        
+        readonly RedisEndpoint _endPoint;
         public RedisCacheProvider(AppSettings appSettings)
         {
-            
-           _endPoint = new RedisEndpoint(appSettings.RedisServerIp, appSettings.RedisPort??0, appSettings.RedisPass);
+
+            _endPoint = new RedisEndpoint(appSettings.RedisServerIp, appSettings.RedisPort ?? 0, appSettings.RedisPass);
         }
         public void Set<T>(string key, T value)
         {
@@ -38,10 +36,10 @@ namespace Anpero.Ultil.Caching
             }
             using (RedisClient client = new RedisClient(_endPoint))
             {
-                client.Set(key, value, timeOut);             
+                client.Set(key, value, timeOut);
             }
         }
-      
+
         public bool TryGet<T>(string key, out T? outPut)
         {
             T? result = default(T);
@@ -98,6 +96,6 @@ namespace Anpero.Ultil.Caching
 
             return false;
         }
-       
+
     }
 }

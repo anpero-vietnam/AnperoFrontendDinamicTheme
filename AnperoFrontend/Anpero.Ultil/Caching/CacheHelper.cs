@@ -1,45 +1,38 @@
 ﻿using AnperoModels;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
-using ServiceStack;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Caching;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Anpero.Ultil.Caching
 {
-    public  class CacheHelper: ICacheService
+    public class CacheHelper : ICacheService
     {
         readonly AppSettings appSettings;
         private readonly IMemoryCache _memoryCache;
         public CacheHelper(IOptions<AppSettings> option, IMemoryCache memoryCache)
         {
             _memoryCache = memoryCache;
-            appSettings = option.Value;  
-        }        
+            appSettings = option.Value;
+        }
 
         ICacheService iCacheProvider
         {
             get
             {
-                
-                    if (appSettings.IsUsingRedisCache)
-                    {
-                        return new RedisCacheProvider(appSettings);
-                    }
-                    else
-                    {
-                        return new MemCacheProvider(_memoryCache);
-                    }
-                }
-                
-            }
-        
 
-        public  void Set<T>(string cacheKey, T objects)
+                if (appSettings.IsUsingRedisCache)
+                {
+                    return new RedisCacheProvider(appSettings);
+                }
+                else
+                {
+                    return new MemCacheProvider(_memoryCache);
+                }
+            }
+
+        }
+
+
+        public void Set<T>(string cacheKey, T objects)
         {
             try
             {
@@ -61,8 +54,8 @@ namespace Anpero.Ultil.Caching
 
             }
         }
-        
-        public  bool TryGet<T>(string cacheKey, out T? outPut)
+
+        public bool TryGet<T>(string cacheKey, out T? outPut)
         {
 
             try
@@ -76,7 +69,7 @@ namespace Anpero.Ultil.Caching
                 return false;
             }
         }
-        public  bool Remove(string cacheKey)
+        public bool Remove(string cacheKey)
         {
             try
             {
@@ -89,7 +82,7 @@ namespace Anpero.Ultil.Caching
             }
 
         }
-        public  bool ResetAllCache()
+        public bool ResetAllCache()
         {
             try
             {

@@ -1,5 +1,5 @@
 ﻿@model BaseController
-@using AnperoModels;
+@using AnperoEnum;
 @using Anpero.Ultil;
 @{    
     string[] bodyHtml = Model.GetMainLayoutContent().Split("@RenderBody()"); 
@@ -40,7 +40,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="@Model.commonData.Favicon" />
     <link rel="icon" type="image/png" href="@Model.commonData.Favicon" />
     <script src="/js/jquery-3.7.1.min.js"></script>
-    @await Component.InvokeAsync(typeof(ModuleViewComponent), new {moduleId=Modules.HomePage})
+    @await Component.InvokeAsync(typeof(ModuleViewComponent), new {moduleId=Modules.HomePage,client=Model.anperoClient})
     @await RenderSectionAsync("head", required: false)
 </head>
 <body>
@@ -55,7 +55,7 @@
     {
         @RenderBody()
     }
-    @await Component.InvokeAsync(typeof(ModuleViewComponent), new {moduleId=Modules.HomePage})
+    @await Component.InvokeAsync(typeof(ModuleViewComponent), new {moduleId=Modules.HomePage,client=Model.anperoClient})
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

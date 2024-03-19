@@ -1,22 +1,23 @@
 ﻿using AnperoModels;
 using Microsoft.Extensions.Options;
-using Microsoft.AspNetCore.Http;
+
 namespace AnperoFrontend.Bussiness
 {
     public class ClientControl : IClientControl
     {
         private readonly AppSettings appSettings;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        
-        public ClientControl(IOptions<AppSettings> iOptions,IHttpContextAccessor httpContextAccessor) {
+
+        public ClientControl(IOptions<AppSettings> iOptions, IHttpContextAccessor httpContextAccessor)
+        {
             appSettings = iOptions.Value;
-            _httpContextAccessor= httpContextAccessor;
-        } 
+            _httpContextAccessor = httpContextAccessor;
+        }
         public AnperoClient GetClient()
         {
             AnperoClient anperoClient = new AnperoClient();
 
-            if (appSettings != null )
+            if (appSettings != null)
             {
                 if (appSettings.IsInternal && _httpContextAccessor.HttpContext != null)
                 {
@@ -29,7 +30,7 @@ namespace AnperoFrontend.Bussiness
                 {
                     /// get  from appseting file,  used for independent sites deployed
                     anperoClient.StoreId = appSettings.ClientId;
-                    anperoClient.Token = appSettings.TokenKey;                   
+                    anperoClient.Token = appSettings.TokenKey;
                 }
             }
             return anperoClient;

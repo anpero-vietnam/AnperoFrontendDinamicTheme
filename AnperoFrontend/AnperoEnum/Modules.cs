@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AnperoModels
+﻿namespace AnperoEnum
 {
     public static class Modules
     {
-        public static int BaseLayout =>1;
+        public static int BaseLayout => 1;
         public static int HomePage => 2;
-        public static int ProductList => 3;        
+        public static int ProductList => 3;
         public static int ProductDetail => 4;
         public static int ArticleList => 5;
         public static int ArticleDetail => 6;
