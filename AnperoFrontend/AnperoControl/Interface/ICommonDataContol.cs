@@ -3,6 +3,6 @@ namespace AnperoControl.Inteface
 {
     public interface ICommonDataControl
     {
-        Task<CommonDataModel?> GetCommonDataModel(AnperoClient client);
+        Task<CommonDataModel?> GetCommonData(AnperoClient client);
     }
 }

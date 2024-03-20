@@ -25,9 +25,8 @@ namespace AnperoFrontend.Pages
             // Tạo một chuỗi HTML
             if (client != null)
             {
-                var xx = buildModuleControl.GetModuleDataAsync(client, moduleId).Result;
-                string htmlContent = "<div><h1>This is HTML content returned from ViewComponent</h1></div>";
-                var htmlString = new HtmlString(htmlContent);
+                var modulData = buildModuleControl.GetModuleTemplateAsync(client, moduleId).Result;                
+                var htmlString = new HtmlString(modulData.HTMLContent);
                 return new HtmlContentViewComponentResult(htmlString);
             }
             else

@@ -47,7 +47,7 @@ namespace Anpero.Ultil
                 return default(T);
             }
 
-        }
+        }   
         public static async Task<T?> Post(string url, object paramObject)
         {
 
@@ -164,7 +164,7 @@ namespace Anpero.Ultil
             }
 
         }
-        public static string GetAndReturnJson(string url, object paramObject)
+        public static async Task<string> GetString(string url, object paramObject)
         {
             var content = ObjectToDictionary(paramObject);
             var condition = "?";
@@ -173,7 +173,7 @@ namespace Anpero.Ultil
                 url += condition + entry.Key + "=" + entry.Value;
                 condition = "&";
             }
-            var response = client.GetAsync(url).Result;
+            var response =await client.GetAsync(url);
             return response.Content.ReadAsStringAsync().Result;
 
         }

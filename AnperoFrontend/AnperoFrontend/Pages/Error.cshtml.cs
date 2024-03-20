@@ -17,6 +17,7 @@ namespace AnperoFrontend.Pages
         public ErrorModel(ILogger<ErrorModel> logger)
         {
             _logger = logger;
+            
         }
 
 

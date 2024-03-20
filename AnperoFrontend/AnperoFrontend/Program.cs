@@ -17,6 +17,8 @@ builder.Services.AddMemoryCache();
 builder.Services.AddSingleton<ICacheService, CacheHelper>();
 builder.Services.AddSingleton<ICommonDataControl, CommonDataControl>();
 builder.Services.AddSingleton<IBuildModuleInteface, BuildModuleControl>();
+builder.Services.AddSingleton<IAnperoLogger, AnperoLogger>();
+
 
 builder.Services.AddHttpContextAccessor();
 

@@ -11,16 +11,17 @@ namespace AnperoControl
     {
         private readonly AppSettings appSettings;
         private readonly ICacheService cacheService;
-        public BuildModuleControl(IOptions<AppSettings> iOptions, ICacheService cacheService)
+        private readonly IAnperoLogger _logger;
+        public BuildModuleControl(IOptions<AppSettings> iOptions, ICacheService cacheService, IAnperoLogger logger)
         {
             appSettings = iOptions.Value;
             this.cacheService = cacheService;
+            _logger = logger;
         }
-        public async Task<ModuleDataModel?> GetModuleDataAsync(AnperoClient client, int _moduleId)
+        public async Task<ModuleDataModel?> GetModuleTemplateAsync(AnperoClient client, int _moduleId)
         {
             var moduleDataModel = new ModuleDataModel();
-            string cacheKey = string.Format(AnperoEnum.CacheKey.ModuleKey, _moduleId, client.StoreId);
-             
+            string cacheKey = string.Format(AnperoEnum.CacheKey.ModuleKey, _moduleId, client.StoreId);             
             if (!cacheService.TryGet<ModuleDataModel>(cacheKey, out moduleDataModel))
             {
                 var apiUrl = appSettings.ApiUrl.TrimEnd('/');

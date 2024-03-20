@@ -11,9 +11,8 @@ namespace AnperoModels
         public string RedisServerIp { get; set; } = string.Empty;
         public int? RedisPort { get; set; }
         public string? RedisPass { get; set; }
-        public int ShortTimeCaching { get; set; } = 0;
-
-
+        public int ShortTimeCaching { get; set; } = 1;
+        public int LongTimeCaching { get; set; } = 5;
 
     }
 }

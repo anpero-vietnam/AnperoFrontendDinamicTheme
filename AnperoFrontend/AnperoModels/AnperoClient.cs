@@ -1,9 +1,8 @@
 ﻿namespace AnperoModels
 {
-    public class AnperoClient
+    public class AnperoClient: BaseClient
     {
         public DateTime? ExpirationDate { get; set; }
-        public string Token { get; set; } = string.Empty;
-        public string StoreId { get; set; } = string.Empty;        
+          
     }
 }

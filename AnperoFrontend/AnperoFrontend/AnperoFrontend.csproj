@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\js\jquery-3.7.1.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Anpero.Ultil\Anpero.Ultil.csproj" />
     <ProjectReference Include="..\AnperoControl\AnperoControl.csproj" />
     <ProjectReference Include="..\AnperoEnum\AnperoEnum.csproj" />

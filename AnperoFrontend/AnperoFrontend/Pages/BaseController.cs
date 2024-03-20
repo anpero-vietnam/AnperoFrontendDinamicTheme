@@ -31,7 +31,7 @@ namespace AnperoFrontend.Pages
         {
             get
             {
-                CommonDataModel? _commonData = commonDataControl.GetCommonDataModel(anperoClient).Result;
+                CommonDataModel? _commonData = commonDataControl.GetCommonData(anperoClient).Result;
                 return _commonData ?? new CommonDataModel();
             }
         }
